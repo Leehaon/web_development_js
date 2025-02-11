@@ -14,5 +14,7 @@ userInput = prompt('가위, 바위, 보!');
 
 // 입력한 값이 가위, 바위, 보 중 하나라면 통과하는데, 잘못된 철자나 묵, 찌, 파 등이라면 '가위, 바위, 보 중 하나를 입력해야 합니다!'를 출력하는 alert이 나올 수 있돌고 조건문을 작성하시오.
 
-if (userInput === '가위' || userInput === '바위' || userInput === '보') console.log(userInput);
+if (userInput === '가위' || userInput === '바위' || userInput === '보') {
+  console.log(userInput);
+}
 else console.log('가위, 바위, 보 중 하나를 입력해야 합니다!');
