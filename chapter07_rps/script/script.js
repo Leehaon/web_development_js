@@ -24,44 +24,44 @@ userInput = prompt('가위, 바위, 보!');
 
 //   console.log(comInput);
 
-//   // userInput을 기준으로 작성하겠습니다.
-//   if (userInput === SCISSORS) {
-//     // comInput 비교
-//     if (comInput === SCISSORS) {
-//       // 사용자가 비긴 경우
-//       alert(`컴퓨터 : ${comInput} - 컴퓨터와 비겼습니다.`);
-//     } else if (comInput === ROCK) {
-//       // 사용자가 진 경우
-//       alert(`컴퓨터 : ${comInput} - 컴퓨터가 이겼습니다.`);
-//     } else {
-//       // 사용자가 이긴 경우
-//       alert(`컴퓨터 : ${comInput} - 컴퓨터를 이겼습니다.`);
-//     }
-//   } else if (userInput === ROCK) {
-//     // comInput 비교
-//     if (comInput === SCISSORS) {
-//       // 사용자가 이긴 경우
-//       alert(`컴퓨터 : ${comInput} - 컴퓨터를 이겼습니다.`);
-//     } else if (comInput === ROCK) {
-//       // 사용자가 비긴 경우
-//       alert(`컴퓨터 : ${comInput} - 컴퓨터와 비겼습니다.`);
-//     } else {
-//       // 사용자가 진 경우
-//       alert(`컴퓨터 : ${comInput} - 컴퓨터가 이겼습니다.`);
-//     }
-//   } else {
-//     // comInput 비교
-//     if (comInput === SCISSORS) {
-//       // 사용자가 진 경우
-//       alert(`컴퓨터 : ${comInput} - 컴퓨터가 이겼습니다.`);
-//     } else if (comInput === ROCK) {
-//       // 사용자가 이긴 경우
-//       alert(`컴퓨터 : ${comInput} - 컴퓨터를 이겼습니다.`);
-//     } else {
-//       // 사용자가 비긴 경우
-//       alert(`컴퓨터 : ${comInput} - 컴퓨터와 비겼습니다.`);
-//     }
-//   }
+  // userInput을 기준으로 작성하겠습니다.
+  if (userInput === SCISSORS) {
+    // comInput 비교
+    if (comInput === SCISSORS) {
+      // 사용자가 비긴 경우
+      alert(`컴퓨터 : ${comInput} - 컴퓨터와 비겼습니다.`);
+    } else if (comInput === ROCK) {
+      // 사용자가 진 경우
+      alert(`컴퓨터 : ${comInput} - 컴퓨터가 이겼습니다.`);
+    } else {
+      // 사용자가 이긴 경우
+      alert(`컴퓨터 : ${comInput} - 컴퓨터를 이겼습니다.`);
+    }
+  } else if (userInput === ROCK) {
+    // comInput 비교
+    if (comInput === SCISSORS) {
+      // 사용자가 이긴 경우
+      alert(`컴퓨터 : ${comInput} - 컴퓨터를 이겼습니다.`);
+    } else if (comInput === ROCK) {
+      // 사용자가 비긴 경우
+      alert(`컴퓨터 : ${comInput} - 컴퓨터와 비겼습니다.`);
+    } else {
+      // 사용자가 진 경우
+      alert(`컴퓨터 : ${comInput} - 컴퓨터가 이겼습니다.`);
+    }
+  } else {
+    // comInput 비교
+    if (comInput === SCISSORS) {
+      // 사용자가 진 경우
+      alert(`컴퓨터 : ${comInput} - 컴퓨터가 이겼습니다.`);
+    } else if (comInput === ROCK) {
+      // 사용자가 이긴 경우
+      alert(`컴퓨터 : ${comInput} - 컴퓨터를 이겼습니다.`);
+    } else {
+      // 사용자가 비긴 경우
+      alert(`컴퓨터 : ${comInput} - 컴퓨터와 비겼습니다.`);
+    }
+  }
 // }
 
 // 개선안 : 상수를 활용 ctrl + h 사용하면 대치 가능하답니다.
