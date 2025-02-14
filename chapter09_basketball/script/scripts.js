@@ -111,14 +111,14 @@ function onUserShoot(shootType) {
     // 사용자가 이겼을 때 - 졌을 때 - 비겼을 때
     // 이겼습니다 // 졌습니다 // 비겼습니다
     if (userScore > comScore) {
-      textElement.innerHTML = '이겼습니다';
       alert('이겼습니다');
+      textElement.innerHTML = '이겼습니다';
     } else if (userScore < comScore) {
-      textElement.innerHTML = '졌습니다';
       alert('졌습니다');
+      textElement.innerHTML = '졌습니다';
     } else {
-      textElement.innerHTML = '비겼습니다';
       alert('비겼습니다');
+      textElement.innerHTML = '비겼습니다';
     }
   }
 }
