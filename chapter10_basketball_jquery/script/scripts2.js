@@ -18,36 +18,46 @@ let game = {
 
 
 function showText(s) {
-  let textElement = document.getElementById('text');
-  textElement.innerHTML = s;
+  // let textElement = document.getElementById('text');
+  // textElement.innerHTML = s;
+  let $textElement = $('#text')
+  $textElement.html(s);
 }
 
 function updateComScore(score) {
-  let comScoreElement = document.getElementById('computer-score');
+  // let comScoreElement = document.getElementById('computer-score');
+  // computer.score += score;
+  // comScoreElement.innerHTML = computer.score;
+  let $comScoreElement = $('#computer-score')
   computer.score += score;
-  comScoreElement.innerHTML = computer.score;
+  $comScoreElement.html(computer.score);
 }
 
 function updateUserScore(score) {
-  let userScoreElement = document.getElementById('user-score');
+  // let userScoreElement = document.getElementById('user-score');
+  // user.score += score;
+  // userScoreElement.innerHTML = user.score;
+  let $userScoreElement = $('#user-score')
   user.score += score;
-  userScoreElement.innerHTML = user.score;
+  $userScoreElement.html(user.score);
 } 
 
 function disableComButton(flag) {
-  let computerButtons = document.getElementsByClassName('btn-computer');
+  // let computerButtons = document.getElementsByClassName('btn-computer');
 
-  for ( let i = 0 ; i < computerButtons.length ; i++) {
-    computerButtons[i].disabled = flag;
-  }
+  // for ( let i = 0 ; i < computerButtons.length ; i++) {
+  //   computerButtons[i].disabled = flag;
+  // }
+  $('.btn-computer').prop('disabled', flag);
 }
 
 function disableUserButton(flag) {
-  let userButtons = document.getElementsByClassName('btn-user');
+  // let userButtons = document.getElementsByClassName('btn-user');
 
-  for ( let i = 0 ; i < userButtons.length ; i++) {
-    userButtons[i].disabled = flag;
-  }
+  // for ( let i = 0 ; i < userButtons.length ; i++) {
+  //   userButtons[i].disabled = flag;
+  // }
+  $('.btn-user').prop('disabled', flag);
 }
 
 function updateAI(){
@@ -71,11 +81,11 @@ function updateAI(){
 function onComputerShoot() {
   if(!game.isComputerTurn) return;
 
-  updateAI();     
+  updateAI(); 
 
   let shootType = Math.random() < 0.5 ? 2 : 3;
 
-  if (Math.random() < computer['percent' + shootType]) {
+  if (Math.random() < computer['percent' + shootType]) { 
     showText('컴퓨터가 ' + shootType + '점 슛을 성공시켰습니다.');
     updateComScore(2);
   } else {
@@ -113,8 +123,10 @@ function onUserShoot(shootType) {
 
   game.shootLeft --;
 
-  let shootLeftElement = document.getElementById('shots-left')
-  shootLeftElement.innerHTML = game.shootLeft;
+  // let shootLeftElement = document.getElementById('shots-left')
+  // shootLeftElement.innerHTML = game.shootLeft;
+  let $shootLeftElement = $('#shots-left')
+  $shootLeftElement.html(game.shootLeft);
 
   if (game.shootLeft === 0) {
     if (user.score > computer.score) {
