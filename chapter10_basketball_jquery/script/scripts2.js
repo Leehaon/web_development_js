@@ -21,16 +21,34 @@ function showText(s) {
   // let textElement = document.getElementById('text');
   // textElement.innerHTML = s;
   let $textElement = $('#text')
-  $textElement.html(s);
+  // 기존 깜빡거리는 예시
+  // $textElement.fadeOut();
+  // $textElement.html(s);
+  // $textElement.fadeIn();
+  // 콜백 함수를 통한 개선
+  $textElement.fadeOut(300, function() {
+    $textElement.html(s);
+    $textElement.fadeIn(100);
+  });
 }
 
 function updateComScore(score) {
   // let comScoreElement = document.getElementById('computer-score');
   // computer.score += score;
   // comScoreElement.innerHTML = computer.score;
-  let $comScoreElement = $('#computer-score')
+
+  // 제이쿼리 적용 후 - 플러그인 전
+  // let $comScoreElement = $('#computer-score')
+  // computer.score += score;
+  // $comScoreElement.html(computer.score);
+
+  // 플러그인 적용 후
   computer.score += score;
-  $comScoreElement.html(computer.score);
+  let $comScoreElement = $('#computer-score');
+
+  $comScoreElement.animateNumber({
+    number: computer.score
+  });
 }
 
 function updateUserScore(score) {
@@ -48,7 +66,7 @@ function disableComButton(flag) {
   // for ( let i = 0 ; i < computerButtons.length ; i++) {
   //   computerButtons[i].disabled = flag;
   // }
-  $('.btn-computer').prop('disabled', flag);
+  $('.btn-computer').prop('disabled', flag)
 }
 
 function disableUserButton(flag) {
@@ -57,7 +75,7 @@ function disableUserButton(flag) {
   // for ( let i = 0 ; i < userButtons.length ; i++) {
   //   userButtons[i].disabled = flag;
   // }
-  $('.btn-user').prop('disabled', flag);
+  $('.btn-user').prop('disabled', flag)
 }
 
 function updateAI(){
