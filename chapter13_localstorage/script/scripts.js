@@ -9,7 +9,7 @@
 */
 
 // 1. 할 일 목록을 저장할 빈 배열
-let todo = [];
+let todos = [];
 
 document.addEventListener('DOMContentLoaded', () => {
   // todos 데이터를 JSON 형태로 '파싱'하고, 값이 없으면 빈 배열을 사용하도록 할 예정
